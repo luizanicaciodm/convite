@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você gostaria de sair comigo?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-image: url('https://img.freepik.com/vetores-gratis/fundo-de-dia-mundial-do-chocolate-plano-com-doces-de-chocolate_23-2149430827.jpg?t=st=1735566528~exp=1735570128~hmac=111d89473c4692c8e02816f5c8b86a58513b8627e4149819ba16aaf8deaf38c1&w=826');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #btnYes {
+            background-color: #28a745;
+            color: white;
+        }
+        #btnNo {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você gostaria de sair comigo?</h1>
+    <button id="btnYes">Sim</button>
+    <button id="btnNo">Não</button>
+
+    <script>
+        const btnNo = document.getElementById('btnNo');
+        const btnYes = document.getElementById('btnYes');
+
+        // Tornar o botão "Não" impossível de clicar
+        btnNo.addEventListener('mouseenter', () => {
+            const x = Math.random() * (window.innerWidth - btnNo.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btnNo.offsetHeight);
+            btnNo.style.left = `${x}px`;
+            btnNo.style.top = `${y}px`;
+        });
+
+        // Mensagem ao clicar no botão "Sim"
+        btnYes.addEventListener('click', () => {
+            alert('Ainda bem que você não pensou em clicar no botão "Não" hahahaha. Partiu combinar no WhatsApp o dia e o local então!');
+        });
+    </script>
+</body>
+</html>
